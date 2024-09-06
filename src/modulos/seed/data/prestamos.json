@@ -1,0 +1,107 @@
+[
+    {
+      "libro_id": 1004,
+      "socio_id": 154,
+      "fecha_del_prestamo": "2024-05-15",
+      "fecha_limite_a_devolver": "2024-05-30",
+      "estado_del_prestamo": "en curso"
+    },
+    {
+      "libro_id": 1007,
+      "socio_id": 155,
+      "fecha_del_prestamo": "2024-05-10",
+      "fecha_limite_a_devolver": "2024-05-25",
+      "estado_del_prestamo": "en curso"
+    },
+    {
+      "libro_id": 1010,
+      "socio_id": 151,
+      "fecha_del_prestamo": "2024-05-06",
+      "fecha_limite_a_devolver": "2024-05-21",
+      "estado_del_prestamo": "en curso"
+    },
+    {
+      "libro_id": 1014,
+      "socio_id": 152,
+      "fecha_del_prestamo": "2024-05-15",
+      "fecha_limite_a_devolver": "2024-05-30",
+      "estado_del_prestamo": "en curso"
+    },
+    {
+      "libro_id": 1012,
+      "socio_id": 153,
+      "fecha_del_prestamo": "2024-05-01",
+      "fecha_limite_a_devolver": "2024-05-16",
+      "estado_del_prestamo": "terminado"
+    },
+    {
+      "libro_id": 1008,
+      "socio_id": 154,
+      "fecha_del_prestamo": "2024-04-27",
+      "fecha_limite_a_devolver": "2024-05-12",
+      "estado_del_prestamo": "terminado"
+    },
+    {
+      "libro_id": 1020,
+      "socio_id": 159,
+      "fecha_del_prestamo": "2024-05-19",
+      "fecha_limite_a_devolver": "2024-06-03",
+      "estado_del_prestamo": "en curso"
+    },
+    {
+      "libro_id": 1028,
+      "socio_id": 165,
+      "fecha_del_prestamo": "2024-05-15",
+      "fecha_limite_a_devolver": "2024-05-30",
+      "estado_del_prestamo": "en curso"
+    },
+    {
+      "libro_id": 1025,
+      "socio_id": 161,
+      "fecha_del_prestamo": "2024-04-12",
+      "fecha_limite_a_devolver": "2024-04-27",
+      "estado_del_prestamo": "terminado"
+    },
+    {
+      "libro_id": 1016,
+      "socio_id": 158,
+      "fecha_del_prestamo": "2024-04-02",
+      "fecha_limite_a_devolver": "2024-04-16",
+      "estado_del_prestamo": "terminado"
+    },
+    {
+      "libro_id": 1004,
+      "socio_id": 168,
+      "fecha_del_prestamo": "2024-04-10",
+      "fecha_limite_a_devolver": "2024-04-25",
+      "estado_del_prestamo": "terminado"
+    },
+    {
+      "libro_id": 1016,
+      "socio_id": 170,
+      "fecha_del_prestamo": "2024-04-19",
+      "fecha_limite_a_devolver": "2024-05-02",
+      "estado_del_prestamo": "terminado"
+    },
+    {
+      "libro_id": 1026,
+      "socio_id": 159,
+      "fecha_del_prestamo": "2024-04-05",
+      "fecha_limite_a_devolver": "2024-04-20",
+      "estado_del_prestamo": "terminado"
+    },
+    {
+      "libro_id": 1030,
+      "socio_id": 161,
+      "fecha_del_prestamo": "2024-04-12",
+      "fecha_limite_a_devolver": "2024-04-27",
+      "estado_del_prestamo": "terminado"
+    },
+    {
+      "libro_id": 1006,
+      "socio_id": 164,
+      "fecha_del_prestamo": "2024-04-21",
+      "fecha_limite_a_devolver": "2024-05-06",
+      "estado_del_prestamo": "terminado"
+    }
+]

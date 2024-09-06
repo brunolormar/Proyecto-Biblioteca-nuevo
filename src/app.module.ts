@@ -3,6 +3,11 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { AutoresModule } from './modulos/autores/autores.module';
+import { LibrosModule } from './modulos/libros/libros.module';
+import { PrestamosModule } from './modulos/prestamos/prestamos.module';
+import { SociosModule } from './modulos/socios/socios.module';
+import { SeedModule } from './modulos/seed/seed.module';
 
 @Module({
   imports: [
@@ -16,7 +21,12 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       password: process.env.DB_PASSWORD,
       autoLoadEntities: true,
       synchronize: true
-    })
+    }),
+    AutoresModule,
+    LibrosModule,
+    PrestamosModule,
+    SociosModule,
+    SeedModule
 
   ],  
   controllers: [AppController],

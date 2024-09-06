@@ -1,0 +1,74 @@
+[
+    {
+      "codigo_de_autor": "101J",
+      "nombre": "Mary Higgins Clark"
+    },
+    {
+      "codigo_de_autor": "111A",
+      "nombre": "Elisabetta Dami"
+    },
+    {
+      "codigo_de_autor": "202K",
+      "nombre": "Pio Baroja"
+    },
+    {
+      "codigo_de_autor": "222B",
+      "nombre": "René Goscinny"
+    },
+    {
+      "codigo_de_autor": "303L",
+      "nombre": "Federico Garcia Lorca"
+    },
+    {
+      "codigo_de_autor": "333C",
+      "nombre": "Francisco Ibañez"
+    },
+    {
+      "codigo_de_autor": "404M",
+      "nombre": "Felix Lope de Vega y Carpio"
+    },
+    {
+      "codigo_de_autor": "444D",
+      "nombre": "Pere Rovira"
+    },
+    {
+      "codigo_de_autor": "505N",
+      "nombre": "Derek Landy"
+    },
+    {
+      "codigo_de_autor": "555E",
+      "nombre": "Mary Shelley"
+    },
+    {
+      "codigo_de_autor": "606O",
+      "nombre": "Jeff Kinney"
+    },
+    {
+      "codigo_de_autor": "666F",
+      "nombre": "Bram Stoker"
+    },
+    {
+      "codigo_de_autor": "707P",
+      "nombre": "William Shakespeare"
+    },
+    {
+      "codigo_de_autor": "777G",
+      "nombre": "Franz Kafka"
+    },
+    {
+      "codigo_de_autor": "808Q",
+      "nombre": "Jaume Ribera"
+    },
+    {
+      "codigo_de_autor": "888H",
+      "nombre": "Miguel de Cervantes Saavedra"
+    },
+    {
+      "codigo_de_autor": "909R",
+      "nombre": "Roberto Santiago"
+    },
+    {
+      "codigo_de_autor": "999I",
+      "nombre": "Javier Castillo"
+    }
+]

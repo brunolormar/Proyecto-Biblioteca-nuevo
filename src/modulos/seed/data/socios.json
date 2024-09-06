@@ -1,0 +1,157 @@
+[
+    {
+      "numero_de_socio": 151,
+      "nombre": "Nuria",
+      "apellidos": "Garcia Rodriguez",
+      "direccion": "C/ Alcazar Nº 22, 04600 Huercal-Overa (Almeria)",
+      "DNI": "12345678A",
+      "numero_de_telefono": 650364721
+    },
+    {
+      "numero_de_socio": 152,
+      "nombre": "Antonio",
+      "apellidos": "Aro Tortosa",
+      "direccion": "C/ Hileras Nº 14, 04600 Huercal-Overa (Almeria) ",
+      "DNI": "87654321Z"
+    },
+    {
+      "numero_de_socio": 153,
+      "nombre": "Diego",
+      "apellidos": "Sánchez Molina",
+      "direccion": "C/ Altamira Nº 42, 04600 Huercal-Overa (Almeria)",
+      "DNI": "45678909G",
+      "numero_de_telefono": 679234832
+    },
+    {
+      "numero_de_socio": 154,
+      "nombre": "Antonio",
+      "apellidos": "Asensio Delgado",
+      "direccion": "C/ Veláquez Nº 28, 04600 Huercal-Overa (Almeria)",
+      "DNI": "98436721D",
+      "numero_de_telefono": 661498271
+    },
+    {
+      "numero_de_socio": 155,
+      "nombre": "Diana",
+      "apellidos": "Martínez Viúdez",
+      "direccion": "C/ Azoríng Nº 6, 04600 Huercal-Overa (Almeria)",
+      "DNI": "54789845K"
+    },
+    {
+      "numero_de_socio": 156,
+      "nombre": "Paula",
+      "apellidos": "Fuentes Blesa",
+      "direccion": "C/ Mayor Nº 12, 04600 Huercal-Overa (Almeria)",
+      "DNI": "43762397T",
+      "numero_de_telefono": 642149827
+    },
+    {
+      "numero_de_socio": 157,
+      "nombre": "Antonio",
+      "apellidos": "Aro Tortosa",
+      "direccion": "C/ Hileras Nº 14, 04600 Huercal-Overa (Almeria)",
+      "DNI": "48923749O",
+      "numero_de_telefono": 658237387
+    },
+    {
+      "numero_de_socio": 158,
+      "nombre": "Francisco",
+      "apellidos": "García Fortes",
+      "direccion": "C/ Pio Baroja Nº 13, 04600 Huercal-Overa (Almeria)",
+      "DNI": "93729747D",
+      "numero_de_telefono": 624254128
+    },
+    {
+      "numero_de_socio": 159,
+      "nombre": "Maria",
+      "apellidos": "Salas Ruiz",
+      "direccion": "C/ Gavilan Nº 90, 04600 Huercal-Overa (Almeria)",
+      "DNI": "94763961L",
+      "numero_de_telefono": 645238089
+    },
+    {
+      "numero_de_socio": 160,
+      "nombre": "Mónica",
+      "apellidos": "Artero Padilla",
+      "direccion": "C/ Espejo Nº 20, 04600 Huercal-Overa (Almeria)",
+      "DNI": "49652534E"
+    },
+    {
+      "numero_de_socio": 161,
+      "nombre": "Isabel",
+      "apellidos": "Torres Castillo",
+      "direccion": "C/ Veleta Nº 45, 04600 Huercal-Overa (Almeria)",
+      "DNI": "54329438B",
+      "numero_de_telefono": 650313267
+    },
+    {
+      "numero_de_socio": 162,
+      "nombre": "Pedro",
+      "apellidos": "Baena Amat",
+      "direccion": "C/ California Nº 3, 04600 Huercal-Overa (Almeria)",
+      "DNI": "53772349F"
+    },
+    {
+      "numero_de_socio": 163,
+      "nombre": "Ángela",
+      "apellidos": "Carrasco Soriano",
+      "direccion": "C/ Magallanes Nº 15, 04600 Huercal-Overa (Almeria)",
+      "DNI": "56478356R",
+      "numero_de_telefono": 687517244
+    },
+        {
+      "numero_de_socio": 164,
+      "nombre": "Miguel",
+      "apellidos": "Jiménez Paredes",
+      "direccion": "C/ Altamira Nº 32, 04600 Huercal-Overa (Almeria)",
+      "DNI": "98415395Q",
+      "numero_de_telefono": 632485221
+    },
+    {
+      "numero_de_socio": 165,
+      "nombre": "Carmen",
+      "apellidos": "Lopera Gallardo",
+      "direccion": "C/ Victoria Nº 18, 04600 Huercal-Overa (Almeria)",
+      "DNI": "47259528B",
+      "numero_de_telefono": 637564316
+    },
+    {
+      "numero_de_socio": 166,
+      "nombre": "Dario",
+      "apellidos": "Mansilla Casado",
+      "direccion": "C/ Mar Nº 67, 04600 Huercal-Overa (Almeria) ",
+      "DNI": "46927341Z",
+      "numero_de_telefono": 357414832
+    },
+        {
+      "numero_de_socio": 167,
+      "nombre": "Juan",
+      "apellidos": "Egea González",
+      "direccion": "C/ Jazmines Nº 18, 04600 Huercal-Overa (Almeria) ",
+      "DNI": "45684790E"
+    },
+    {
+      "numero_de_socio": 168,
+      "nombre": "Gines",
+      "apellidos": "Carreño Moya",
+      "direccion": "C/ Iglesia Nº 4, 04600 Huercal-Overa (Almeria) ",
+      "DNI": "10389301P",
+      "numero_de_telefono": 612185283
+    },
+    {
+      "numero_de_socio": 169,
+      "nombre": "Maria Jose",
+      "apellidos": "Espinosa Berbel",
+      "direccion": "C/ Salitre Nº 24, 04600 Huercal-Overa (Almeria) ",
+      "DNI": "57389340D",
+      "numero_de_telefono": 643195430
+    },
+    {
+      "numero_de_socio": 170,
+      "nombre": "Rodrigo",
+      "apellidos": "Vidal Cabrera",
+      "direccion": "C/ Estrella Nº 29, 04600 Huercal-Overa (Almeria) ",
+      "DNI": "54104572N",
+      "numero_de_telefono": 601843135
+    }
+]
