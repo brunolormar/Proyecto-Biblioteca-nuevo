@@ -19,22 +19,51 @@ export class SeedService {
                private readonly prestamoService: PrestamosService,
                private readonly socioService: SociosService){}
   
-  public loadData(){
-    seedAutores.forEach(( autor: Autor ) => {
-      console.log(autor.nombre);
-    })
-    seedLibros.forEach(( libro: Libro ) => {
-      console.log(libro.titulo);
-    })
-    seedPrestamos.forEach(( prestamo: Prestamo ) => {
-      console.log(prestamo.fecha_limite_a_devolver);
-    })
-    seedSocios.forEach(( socio: Socio ) => {
-      console.log(socio.nombre);
-    })
-    return {
-      msg: 'Carga de datos finalizada'
-    }
+  public async loadData(){
+    await this.insertNewAutores();
+    await this.insertNewLibros();
+    await this.insertNewPrestamos();
+    await this.insertNewSocios();
+  }
+
+  private async insertNewAutores(){
+    await this.autoreService.deleteAllAutores();
+    const insertPromisesAutores = [];
+    seedAutores.forEach( (autor: Autor) => {
+      insertPromisesAutores.push(this.autoreService.create(autor));      
+    });
+    const results = await Promise.all(insertPromisesAutores);
+    return true;
+  }
+
+  private async insertNewLibros(){
+    await this.libroService.deleteAllLibros();
+    const insertPromisesLibros = [];
+    seedLibros.forEach( (libro: Libro) => {
+      insertPromisesLibros.push(this.libroService.create(libro));      
+    });
+    const results = await Promise.all(insertPromisesLibros);
+    return true;
+  }
+
+  private async insertNewPrestamos(){
+    await this.prestamoService.deleteAllPrestamos();
+    const insertPromisesPrestamos = [];
+    seedPrestamos.forEach( (prestamo: Prestamo) => {
+      insertPromisesPrestamos.push(this.prestamoService.create(prestamo));      
+    });
+    const results = await Promise.all(insertPromisesPrestamos);
+    return true;
+  }
+
+  private async insertNewSocios(){
+    await this.socioService.deleteAllSocios();
+    const insertPromisesSocios = [];
+    seedSocios.forEach( (socio: Socio) => {
+      insertPromisesSocios.push(this.socioService.create(socio));      
+    });
+    const results = await Promise.all(insertPromisesSocios);
+    return true;
   }
 }
 
