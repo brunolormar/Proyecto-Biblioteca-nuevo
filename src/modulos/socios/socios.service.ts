@@ -4,13 +4,38 @@ import { UpdateSocioDto } from './dto/update-socio.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Socio } from './entities/socio.entity';
-
+import * as fs from 'fs';
 @Injectable()
 export class SociosService {
   constructor(
     @InjectRepository(Socio)
     private readonly socioRepository: Repository<Socio>
   ) {}
+
+  async onModuleInit() {
+    await this.loadSociosFromFile();
+  }
+
+  async loadSociosFromFile(): Promise<void> {
+    try {
+      const data = fs.readFileSync('src/modulos/seed/data/socios.json', 'utf-8');
+      const socios = JSON.parse(data);
+
+      const socioEntities = socios.map((socio) =>
+        this.socioRepository.create(socio),
+      );
+
+      const existingSocios = await this.socioRepository.count();
+      if (existingSocios === 0) {
+        await this.socioRepository.save(socioEntities);
+        console.log('Datos de socios volcados correctamente.');
+      } else {
+        console.log('La tabla de socios ya contiene datos, no se volcaron nuevos.');
+      }
+    } catch (error) {
+      console.error('Error al volcar los datos de socios:', error);
+    }
+  }
 
   @Post()
   async create(createSocioDto: CreateSocioDto) {

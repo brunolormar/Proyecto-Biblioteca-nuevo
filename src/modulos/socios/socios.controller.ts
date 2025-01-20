@@ -19,17 +19,17 @@ export class SociosController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: number) {
     return this.sociosService.findOne(+id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateSocioDto: UpdateSocioDto) {
+  update(@Param('id') id: number, @Body() updateSocioDto: UpdateSocioDto) {
     return this.sociosService.update(+id, updateSocioDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id') id: number) {
     return this.sociosService.remove(+id);
   }
 }

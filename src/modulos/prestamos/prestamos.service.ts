@@ -6,7 +6,7 @@ import { Repository } from 'typeorm';
 import { Prestamo } from './entities/prestamo.entity';
 import { LibrosService } from '../libros/libros.service';
 import { SociosService } from '../socios/socios.service';
-
+import * as fs from 'fs';
 @Injectable()
 export class PrestamosService {
   constructor(
@@ -15,6 +15,31 @@ export class PrestamosService {
     private librosService: LibrosService,
     private sociosService: SociosService
   ) {}
+
+  async onModuleInit() {
+    await this.loadPrestamosFromFile();
+  }
+
+  async loadPrestamosFromFile(): Promise<void> {
+    try {
+      const data = fs.readFileSync('src/modulos/seed/data/prestamos.json', 'utf-8');
+      const prestamos = JSON.parse(data);
+
+      const prestamoEntities = prestamos.map((prestamo) =>
+        this.prestamoRepository.create(prestamo),
+      );
+
+      const existingPrestamos = await this.prestamoRepository.count();
+      if (existingPrestamos === 0) {
+        await this.prestamoRepository.save(prestamoEntities);
+        console.log('Datos de prestamos volcados correctamente.');
+      } else {
+        console.log('La tabla de prestamos ya contiene datos, no se volcaron nuevos.');
+      }
+    } catch (error) {
+      console.error('Error al volcar los datos de prestamos:', error);
+    }
+  }
 
   @Post()
   async create(createPrestamoDto: CreatePrestamoDto) {

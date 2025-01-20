@@ -5,7 +5,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Libro } from './entities/libro.entity';
 import { Repository } from 'typeorm';
 import { AutoresService } from '../autores/autores.service';
-
+import * as fs from 'fs';
 @Injectable()
 export class LibrosService {
   constructor(
@@ -13,6 +13,31 @@ export class LibrosService {
     private readonly libroRepository: Repository<Libro>,
     private autoresService: AutoresService
   ) {}
+
+  async onModuleInit() {
+    await this.loadLibrosFromFile();
+  }
+
+  async loadLibrosFromFile(): Promise<void> {
+    try {
+      const data = fs.readFileSync('src/modulos/seed/data/libros.json', 'utf-8');
+      const libros = JSON.parse(data);
+
+      const libroEntities = libros.map((libro) =>
+        this.libroRepository.create(libro),
+      );
+
+      const existingLibros = await this.libroRepository.count();
+      if (existingLibros === 0) {
+        await this.libroRepository.save(libroEntities);
+        console.log('Datos de libros volcados correctamente.');
+      } else {
+        console.log('La tabla de libros ya contiene datos, no se volcaron nuevos.');
+      }
+    } catch (error) {
+      console.error('Error al volcar los datos de libros:', error);
+    }
+  }
 
   @Post()
   async create(createLibroDto: CreateLibroDto) {

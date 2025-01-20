@@ -15,7 +15,7 @@ export class Autore {
     @OneToMany(
         () => Libro,
         (libro) => libro.autor,
-        { eager: true }
+        /*{ eager: true }*/
     )
     libros?: Libro[]
 }

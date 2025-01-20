@@ -4,13 +4,38 @@ import { UpdateAutoreDto } from './dto/update-autore.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Autore } from './entities/autore.entity';
 import { Repository } from 'typeorm';
-
+import * as fs from 'fs';
 @Injectable()
 export class AutoresService {
   constructor(
     @InjectRepository(Autore)
     private readonly autorRepository: Repository<Autore>
   ) {}
+
+  async onModuleInit() {
+    await this.loadAutoresFromFile();
+  }
+
+  async loadAutoresFromFile(): Promise<void> {
+    try {
+      const data = fs.readFileSync('src/modulos/seed/data/autores.json', 'utf-8');
+      const autores = JSON.parse(data);
+
+      const autorEntities = autores.map((autor) =>
+        this.autorRepository.create(autor),
+      );
+
+      const existingAutores = await this.autorRepository.count();
+      if (existingAutores === 0) {
+        await this.autorRepository.save(autorEntities);
+        console.log('Datos de autores volcados correctamente.');
+      } else {
+        console.log('La tabla de autores ya contiene datos, no se volcaron nuevos.');
+      }
+    } catch (error) {
+      console.error('Error al volcar los datos de autores:', error);
+    }
+  }
 
   @Post()
   async create(createAutoreDto: CreateAutoreDto) {
@@ -37,6 +62,9 @@ export class AutoresService {
     const autor= this.autorRepository.findOne({
       where:{
         codigo_de_autor
+      },
+      relations: {
+        libros: true
       }
     });
     return autor;
