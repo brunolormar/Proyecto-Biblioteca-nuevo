@@ -5,6 +5,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Autore } from './entities/autore.entity';
 import { Repository } from 'typeorm';
 import * as fs from 'fs';
+import { Like } from 'typeorm';
 @Injectable()
 export class AutoresService {
   constructor(
@@ -96,6 +97,21 @@ export class AutoresService {
 
   async remove(id: string) {
     try {
+      // Verifica si el autor tiene libros asociados
+      const autor = await this.autorRepository.findOne({
+        where: { codigo_de_autor: id },
+        relations: { libros: true }
+      });
+
+      if (autor.libros && autor.libros.length > 0) {
+        return {
+          msg: 'No se puede eliminar el autor porque tiene libros asociados',
+          status: 400
+        };
+      }
+
+      await this.autorRepository.delete(id)
+
       const result = await this.autorRepository.delete(id);
       return{
         msg: 'Registro borrado',
@@ -117,5 +133,33 @@ export class AutoresService {
     }catch(error){
       throw new InternalServerErrorException('sysadmin ...')
     }
+  }
+
+  async buscarPorIdParcial(parcial: string): Promise<{ id: string; nombre: string }[]> {
+    const resultados = await this.autorRepository.find({
+      where: {
+        codigo_de_autor: Like(`${parcial}%`),
+      },
+      select: ['codigo_de_autor', 'nombre'], // Seleccionamos solo lo necesario
+      take: 10,
+      order: { codigo_de_autor: 'ASC' },
+    });
+  
+    // Mapear al formato esperado por el frontend
+    return resultados.map(autor => ({
+      id: autor.codigo_de_autor,
+      nombre: autor.nombre,
+    }));
+  }
+
+  async getNombres() {
+    const result = await this.autorRepository
+    .createQueryBuilder("autor")
+    .select("DISTINCT autor.nombre", "nombre")
+    .orderBy("autor.nombre", "ASC")
+    .getRawMany();
+
+    // Devuelve solo los valores (no objetos con `{ nombre: string }`)
+    return result.map((row) => row.nombre).filter((e) => !!e);
   }
 }

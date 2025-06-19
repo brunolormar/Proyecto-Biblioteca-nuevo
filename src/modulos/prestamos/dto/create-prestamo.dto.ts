@@ -6,9 +6,8 @@ export class CreatePrestamoDto {
     @IsPositive()
     libro_id: number;
 
-    @IsNumber()
-    @IsPositive()
-    socio_id: number;
+    @IsString()
+    usuario_id: string;
 
     @IsString()
     fecha_del_prestamo: string;

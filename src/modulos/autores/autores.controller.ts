@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Query } from '@nestjs/common';
 import { AutoresService } from './autores.service';
 import { CreateAutoreDto } from './dto/create-autore.dto';
 import { UpdateAutoreDto } from './dto/update-autore.dto';
@@ -6,6 +6,21 @@ import { UpdateAutoreDto } from './dto/update-autore.dto';
 @Controller('autores')
 export class AutoresController {
   constructor(private readonly autoresService: AutoresService) {}
+
+  @Get('buscar')
+  buscarAutores(@Query('id') id: string) {
+    console.log('Buscando autores con id parcial:', id);
+    return this.autoresService.buscarPorIdParcial(id);
+  }
+
+  // @Get('buscar')
+  // async buscarPorId(@Query('id') id: string) {
+  //   const resultados = await this.autoresService.buscarPorIdParcial(id);
+  //   return resultados.map((autor) => ({
+  //     id: autor.codigo_de_autor,
+  //     nombre: autor.nombre, // Asegúrate de que exista este campo en la entidad
+  //   }));
+  // }
 
   @Post()
   create(@Body() createAutoreDto: CreateAutoreDto) {
@@ -16,6 +31,11 @@ export class AutoresController {
   @Get()
   findAll() {
     return this.autoresService.findAll();
+  }
+
+  @Get('/nombres')
+  getNombres() {
+    return this.autoresService.getNombres();
   }
 
   @Get(':id')

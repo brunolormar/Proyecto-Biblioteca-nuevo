@@ -1,9 +1,10 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Req } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { CreateAuthDto } from './dto/create-auth.dto';
 import { UpdateAuthDto } from './dto/update-auth.dto';
 import { LoginAuthDto } from './dto/login.dto';
 import { RegisterAuthDto } from './dto/register.dto';
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller('auth')
 export class AuthController {
@@ -29,5 +30,12 @@ export class AuthController {
 
   //perfil
 
+  @Get('validate-token')
+  @UseGuards(AuthGuard('jwt'))
+  validateToken(@Req() req) {
+    return {
+      user: req.user,
+    };
+  }
 }
 

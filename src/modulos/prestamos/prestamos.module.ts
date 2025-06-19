@@ -4,14 +4,14 @@ import { PrestamosController } from './prestamos.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Prestamo } from './entities/prestamo.entity';
 import { LibrosModule } from '../libros/libros.module';
-import { SociosModule } from '../socios/socios.module';
+import { UserModule } from '../user/user.module';
 
 @Module({
   controllers: [PrestamosController],
   providers: [PrestamosService],
   imports: [
     LibrosModule, 
-    SociosModule,
+    UserModule,
     TypeOrmModule.forFeature([Prestamo])
   ],
   exports: [ PrestamosService, TypeOrmModule]

@@ -32,6 +32,7 @@ export class AuthService {
         msg: 'Usuario validando',
         status: 200,
         //user: usuario,
+        user: { username: usuario.username},
         token: this.getAccessToken(usuario)
       }
     }else{
@@ -79,7 +80,7 @@ export class AuthService {
       //y la configuración del JwtModule.register()
       const accessToken = this.jwtService.sign({
         id: user.id,
-        name: user.username,
+        username: user.username,
         email: user.email,
         //rol: user.roles[0],
          //create: user.createsAt

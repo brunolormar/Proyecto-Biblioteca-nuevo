@@ -32,7 +32,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
         //devolvemos los campos deseados del payload
         return {
             id: payload.id,
-            name: payload.username,
+            username: payload.username,
             email: payload.email,
         }
     }

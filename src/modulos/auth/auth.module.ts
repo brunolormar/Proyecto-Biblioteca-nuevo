@@ -6,9 +6,11 @@ import { UserRepository } from '../user/entities/user.repository';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { JwtStrategy } from './strategies/jwt-strategy/jwt-strategy';
 
 @Module({
   imports: [
+    ConfigModule,
     TypeOrmModule.forFeature([
       UserRepository
     ]),
@@ -39,7 +41,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
     })
   ],
   controllers: [AuthController],
-  providers: [AuthService, UserRepository, /*RolRepository, JwtStrategy*/],
+  providers: [AuthService, UserRepository, /*RolRepository,*/ JwtStrategy],
+  exports: [ JwtStrategy, PassportModule, JwtModule],
 })
 export class AuthModule {
   constructor(){

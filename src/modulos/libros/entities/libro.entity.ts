@@ -49,7 +49,7 @@ export class Libro {
     @ManyToOne(
         () => Autore,
         (autor) => autor.libros,
-        {cascade: true, eager: true}
+        {/*cascade: true,*/ eager: true}
     )
     @JoinColumn({ name: 'id_autor' })
     autor: Autore

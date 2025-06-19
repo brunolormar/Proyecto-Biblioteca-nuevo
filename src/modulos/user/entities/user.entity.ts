@@ -1,4 +1,5 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Prestamo } from "src/modulos/prestamos/entities/prestamo.entity";
+import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity({
     name:'USERS'
@@ -71,5 +72,13 @@ export class User {
 
     //relación de 1 a 1 de Auth(User) <---> Cliente
     //Cliente: Cliente;
+
+    @OneToMany(
+        () => Prestamo,
+        (prestamo) => prestamo.usuario,
+        { eager: true }
+    )
+    prestamosUser: Prestamo
+
 }
 

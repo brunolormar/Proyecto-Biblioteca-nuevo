@@ -1,5 +1,5 @@
 import { Libro } from "src/modulos/libros/entities/libro.entity";
-import { Socio } from "src/modulos/socios/entities/socio.entity";
+import { User } from "src/modulos/user/entities/user.entity";
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn} from "typeorm";
 
 @Entity({
@@ -10,8 +10,8 @@ export class Prestamo {
     @PrimaryColumn({ name: 'id_libro'})
     libro_id: number;
 
-    @PrimaryColumn({ name: 'id_socio'})
-    socio_id: number;
+    @PrimaryColumn({ name: 'id_usuario'})
+    usuario_id: string;
 
     @PrimaryColumn({ type: 'varchar', length: 20 })
     fecha_del_prestamo: string;
@@ -31,10 +31,10 @@ export class Prestamo {
     libro: Libro
 
     @ManyToOne(
-        () => Socio,
-        (socio) => socio.prestamosSocio,
+        () => User,
+        (user) => user.prestamosUser,
         {cascade: true}
     )
-    @JoinColumn({ name: 'id_socio' })
-    socio: Socio
+    @JoinColumn({ name: 'id_usuario' })
+    usuario: User
 }

@@ -1,28 +1,147 @@
 [
     {
+        "custom_id": "150",
         "email": "jose@gmail.com",
         "password": "Abc123",
-        "username": "Jose Antonio",
-        "nif": "456563434R"
+        "username": "Jose Antonio"
     },
     {
+        "custom_id": "151",
         "email": "ana@gmail.com",
         "password": "Abc123",
-        "username": "Ana Martinez",
-        "nif": "42356434R"
+        "username": "Ana Martinez"
 
     },
     {
+        "custom_id": "152",
         "email": "pedro@gmail.com",
         "password": "Abc123",
-        "username": "Pedro Montes",
-        "nif": "34567812"
+        "username": "Pedro Montes"
     },
     {
+        "custom_id": "153",
         "email": "maria@gmail.com",
         "password": "Abc123",
-        "username": "Maria Sanchez",
-        "nif": "12345678U"
+        "username": "Maria Sanchez"
+    },
+    {
+        "custom_id": "154",
+        "email": "nuria@gmail.com",
+        "password": "Abc123",
+        "username": "Nuria Garcia Rodriguez"
+    },
+    {
+        "custom_id": "155",
+        "email": "antonio@gmail.com",
+        "password": "Abc123",
+        "username": "Antonio Aro Tortosa"
+    },
+    {
+        "custom_id": "156",
+        "email": "diego@gmail.com",
+        "password": "Abc123",
+        "username": "Diego Sánchez Molina"
+    },
+    {
+        "custom_id": "157",
+        "email": "antonioasensio@gmail.com",
+        "password": "Abc123",
+        "username": "Antonio Asensio Delgado"
+    },
+    {
+        "custom_id": "158",
+        "email": "diana@gmail.com",
+        "password": "Abc123",
+        "username": "Diana Martínez Viúdez"
+    },
+    {
+        "custom_id": "159",
+        "email": "paula@gmail.com",
+        "password": "Abc123",
+        "username": "Paula Fuentes Blesa"
+    },
+    {
+        "custom_id": "160",
+        "email": "francisco@gmail.com",
+        "password": "Abc123",
+        "username": "Francisco García Fortes"
+    },
+    {
+        "custom_id": "161",
+        "email": "mariasalas@gmail.com",
+        "password": "Abc123",
+        "username": "Maria Salas Ruiz"
+    },
+    {
+        "custom_id": "162",
+        "email": "mónica@gmail.com",
+        "password": "Abc123",
+        "username": "Mónica Artero Padilla"
+    },
+    {
+        "custom_id": "163",
+        "email": "isabel@gmail.com",
+        "password": "Abc123",
+        "username": "Isabel Torres Castillo"
+    },
+    {
+        "custom_id": "164",
+        "email": "pedrobaena@gmail.com",
+        "password": "Abc123",
+        "username": "Pedro Baena Amat"
+    },
+    {
+        "custom_id": "165",
+        "email": "ángela@gmail.com",
+        "password": "Abc123",
+        "username": "Ángela Carrasco Soriano"
+    },
+    {
+        "custom_id": "166",
+        "email": "miguel@gmail.com",
+        "password": "Abc123",
+        "username": "Miguel Jiménez Paredes"
+    },
+    {
+        "custom_id": "167",
+        "email": "carmen@gmail.com",
+        "password": "Abc123",
+        "username": "Carmen Lopera Gallardo"
+    },
+    {
+        "custom_id": "168",
+        "email": "dario@gmail.com",
+        "password": "Abc123",
+        "username": "Dario Mansilla Casado"
+    },
+    {
+        "custom_id": "169",
+        "email": "juan@gmail.com",
+        "password": "Abc123",
+        "username": "Juan Egea González"
+    },
+    {
+        "custom_id": "170",
+        "email": "gines@gmail.com",
+        "password": "Abc123",
+        "username": "Gines Carreño Moya"
+    },
+    {
+        "custom_id": "171",
+        "email": "mariajose@gmail.com",
+        "password": "Abc123",
+        "username": "Maria Jose Espinosa Berbel"
+    },
+    {
+        "custom_id": "172",
+        "email": "rodrigo@gmail.com",
+        "password": "Abc123",
+        "username": "Rodrigo Vidal Cabrera"
+    },
+    {
+        "custom_id": "173",
+        "email": "admin@gmail.com",
+        "password": "Abc123",
+        "username": "Admin"
     }
-
 ]

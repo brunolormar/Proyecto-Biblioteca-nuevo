@@ -7,7 +7,7 @@ export class UpdatePrestamoDto extends PartialType(CreatePrestamoDto) {
     libro_id: number;
   
     @IsOptional()
-    socio_id: number;
+    usuario_id: string;
   
     @IsOptional()
     fecha_del_prestamo: string;
